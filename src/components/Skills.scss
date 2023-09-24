@@ -1,0 +1,128 @@
+.skills {
+	background-color: lightblue;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+
+	.arrows {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 600px;
+	}
+	.leftarrow {
+		position: absolute;
+		height: 40px;
+		cursor: pointer;
+		left: 0;
+		margin-left: 300px;
+		animation: leftArrowAnimation 2s ease infinite;
+	}
+
+	.rightarrow {
+		position: absolute;
+		height: inherit;
+		cursor: pointer;
+		right: 0;
+		margin-right: 300px;
+		animation: rightArrowAnimation 2s ease infinite;
+	}
+
+	@keyframes leftArrowAnimation {
+		0% {
+			transform: translateX(-8px);
+		}
+
+		100% {
+			transform: translateX(8px);
+		}
+	}
+
+	@keyframes rightArrowAnimation {
+		0% {
+			transform: translateX(-8px);
+		}
+
+		100% {
+			transform: translateX(8px);
+		}
+	}
+
+	.slider {
+		height: 400px;
+		display: flex;
+		position: absolute;
+
+		transition: transform 1s ease; /* Add transition property */
+
+		justify-content: center;
+		left: 0;
+
+		.container {
+			width: 100vw;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			.items {
+				width: 800px;
+				height: 100%;
+				background-color: white;
+				border-radius: 20px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				.left {
+					flex: 4;
+					height: 80%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					.leftcontainer {
+						width: 90%;
+						height: 80%;
+						display: flex;
+						justify-content: space-between;
+						flex-direction: column;
+
+						h1 {
+							font-size: "35px";
+							font-weight: 500;
+							font-family: "Arial, sans-serif";
+						}
+
+						.imgcontainer {
+							width: 45px;
+							height: 45px;
+							border-radius: 60%;
+							background-color: rgb(222, 164, 143);
+							display: flex;
+							align-items: center;
+							justify-content: center;
+						}
+						span {
+							font-size: 15px;
+							cursor: pointer;
+							text-decoration: underline;
+							font-weight: 600;
+						}
+					}
+				}
+				.right {
+					height: 100%;
+					flex: 6;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					overflow: hidden;
+
+					img {
+						height: 100%;
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
